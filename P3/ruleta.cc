@@ -208,7 +208,7 @@ void Ruleta::getPremiosJugador(list <Jugador> :: iterator jugador, int &ganancia
 				}
 			}break;
 			case 4:{
-				if(getBola() == 0) { 	// With number 0, the player loses
+				if(getBola() == 0) {
 					premio -= atoi(cantidad);
 					gananciasBanca += atoi(cantidad);
 					break;
@@ -224,13 +224,13 @@ void Ruleta::getPremiosJugador(list <Jugador> :: iterator jugador, int &ganancia
 					resultado = "alto";
 				}
 
-				if(strcmp(resultado.c_str(), valor) == 0) {	// Evaluates if player's bet is correct
+				if(strcmp(resultado.c_str(), valor) == 0) {
 					premio += atoi(cantidad);
-					gananciasBanca -= atoi(cantidad);	// If the player wins, bank loses
+					gananciasBanca -= atoi(cantidad);
 				}
 				else {
 					premio -= atoi(cantidad);
-					gananciasBanca += atoi(cantidad);	// If the player loses, bank wins
+					gananciasBanca += atoi(cantidad);
 				}
 			}break;
 		}
