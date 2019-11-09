@@ -1,7 +1,7 @@
 #include "contador.h"
 #include <list>
 
-Contador::Contador(int valor, int min, int max):max_(max), min_(min){
+Contador :: Contador(int valor, int min, int max):max_(max), min_(min){
 	ncambios_ = 0;
 	if (valor <= max && valor >= min){
 		valor_ = valor;
@@ -19,7 +19,7 @@ Contador::Contador(int valor, int min, int max):max_(max), min_(min){
 	cambios_.push_back(valor_);
 }
 
-Contador Contador::operator = (const Contador &c){
+Contador Contador :: operator = (const Contador &c){
 	setValor(c.get());
 	setMin(c.getMin());
 	setMax(c.getMax());
@@ -30,7 +30,7 @@ Contador Contador::operator = (const Contador &c){
 	return *this;
 }
 
-Contador Contador::operator = (const int &i){
+Contador Contador :: operator = (const int &i){
 	if (i >= max_){
 		valor_ = max_;
 	}
@@ -47,7 +47,7 @@ Contador Contador::operator = (const int &i){
 	return *this;
 }
 
-Contador Contador::operator ++ (int){
+Contador Contador :: operator ++ (int){
 	Contador aux = *this;
 
 	if (valor_ >= max_){
@@ -63,7 +63,7 @@ Contador Contador::operator ++ (int){
 	return aux;
 }
 
-Contador Contador::operator -- (void){
+Contador Contador :: operator -- (void){
 	if (valor_ <= min_){
 		valor_ = min_;
 	}
@@ -77,7 +77,7 @@ Contador Contador::operator -- (void){
 	return *this;
 }
 
-Contador Contador::operator ++ (void){
+Contador Contador :: operator ++ (void){
 	if (valor_ >= max_){
 		valor_ = max_;
 	}
