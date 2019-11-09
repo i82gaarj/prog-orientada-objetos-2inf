@@ -1,4 +1,4 @@
-# prog-orientada-objetos-2inf
+# Programación Orientada a Objetos
 Prácticas de la asignatura Programación orientada a Objetos.
 
 Grado de Ingeniería Informática
