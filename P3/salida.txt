@@ -1,0 +1,212 @@
+ruleta.cc: En la función miembro ‘bool Ruleta::addJugador(Jugador)’:
+ruleta.cc:28:1: aviso: el control alcanza el final de una función que no es void [-Wreturn-type]
+ }
+ ^
+ruleta.cc: En la función miembro ‘int Ruleta::deleteJugador(std::__cxx11::string)’:
+ruleta.cc:43:1: aviso: el control alcanza el final de una función que no es void [-Wreturn-type]
+ }
+ ^
+In file included from /home/i82gaarj/Desktop/poo/googletest/include/gtest/gtest.h:375:0,
+                 from ruleta_unittest.cc:16:
+ruleta_unittest.cc: En la función miembro ‘virtual void Ruleta_Constructor_Test::TestBody()’:
+ruleta_unittest.cc:24:43: error: passing ‘const Crupier’ as ‘this’ argument discards qualifiers [-fpermissive]
+   EXPECT_EQ("33XX", r.getCrupier().getDNI());
+                                           ^
+In file included from crupier.h:4:0,
+                 from ruleta_unittest.cc:14:
+persona.h:23:16: nota:   en la llamada a ‘std::__cxx11::string Persona::getDNI()’
+  inline string getDNI(){
+                ^
+In file included from /home/i82gaarj/Desktop/poo/googletest/include/gtest/gtest.h:375:0,
+                 from ruleta_unittest.cc:16:
+ruleta_unittest.cc:25:49: error: passing ‘const Crupier’ as ‘this’ argument discards qualifiers [-fpermissive]
+   EXPECT_EQ("codigo1", r.getCrupier().getCodigo());
+                                                 ^
+In file included from ruleta_unittest.cc:14:0:
+crupier.h:18:16: nota:   en la llamada a ‘std::__cxx11::string Crupier::getCodigo()’
+  inline string getCodigo(){
+                ^
+In file included from /home/i82gaarj/Desktop/poo/googletest/include/gtest/gtest.h:375:0,
+                 from ruleta_unittest.cc:16:
+ruleta_unittest.cc: En la función miembro ‘virtual void Ruleta_addJugador_Test::TestBody()’:
+ruleta_unittest.cc:67:54: error: passing ‘const Jugador’ as ‘this’ argument discards qualifiers [-fpermissive]
+   EXPECT_EQ("44XX", r.getJugadores().begin()->getDNI());
+                                                      ^
+In file included from crupier.h:4:0,
+                 from ruleta_unittest.cc:14:
+persona.h:23:16: nota:   en la llamada a ‘std::__cxx11::string Persona::getDNI()’
+  inline string getDNI(){
+                ^
+In file included from /home/i82gaarj/Desktop/poo/googletest/include/gtest/gtest.h:375:0,
+                 from ruleta_unittest.cc:16:
+ruleta_unittest.cc:68:61: error: passing ‘const Jugador’ as ‘this’ argument discards qualifiers [-fpermissive]
+   EXPECT_EQ("jugador1", r.getJugadores().begin()->getCodigo());
+                                                             ^
+In file included from ruleta.h:5:0,
+                 from ruleta_unittest.cc:15:
+jugador.h:28:22: nota:   en la llamada a ‘const string Jugador::getCodigo()’
+  inline const string getCodigo(){
+                      ^
+In file included from /home/i82gaarj/Desktop/poo/googletest/include/gtest/gtest.h:375:0,
+                 from ruleta_unittest.cc:16:
+ruleta_unittest.cc:69:56: error: passing ‘const Jugador’ as ‘this’ argument discards qualifiers [-fpermissive]
+   EXPECT_EQ("55XX", (--r.getJugadores().end())->getDNI());
+                                                        ^
+In file included from crupier.h:4:0,
+                 from ruleta_unittest.cc:14:
+persona.h:23:16: nota:   en la llamada a ‘std::__cxx11::string Persona::getDNI()’
+  inline string getDNI(){
+                ^
+In file included from /home/i82gaarj/Desktop/poo/googletest/include/gtest/gtest.h:375:0,
+                 from ruleta_unittest.cc:16:
+ruleta_unittest.cc:70:63: error: passing ‘const Jugador’ as ‘this’ argument discards qualifiers [-fpermissive]
+   EXPECT_EQ("jugador2", (--r.getJugadores().end())->getCodigo());
+                                                               ^
+In file included from ruleta.h:5:0,
+                 from ruleta_unittest.cc:15:
+jugador.h:28:22: nota:   en la llamada a ‘const string Jugador::getCodigo()’
+  inline const string getCodigo(){
+                      ^
+ruleta_unittest.cc: En la función miembro ‘virtual void Ruleta_addJugadorFicheros_Test::TestBody()’:
+ruleta_unittest.cc:80:53: error: passing ‘const Jugador’ as ‘this’ argument discards qualifiers [-fpermissive]
+   string nomfich = r.getJugadores().begin()->getDNI() + ".txt";
+                                                     ^
+In file included from crupier.h:4:0,
+                 from ruleta_unittest.cc:14:
+persona.h:23:16: nota:   en la llamada a ‘std::__cxx11::string Persona::getDNI()’
+  inline string getDNI(){
+                ^
+ruleta_unittest.cc:84:48: error: passing ‘const Jugador’ as ‘this’ argument discards qualifiers [-fpermissive]
+   nomfich = (--r.getJugadores().end())->getDNI() + ".txt";
+                                                ^
+In file included from crupier.h:4:0,
+                 from ruleta_unittest.cc:14:
+persona.h:23:16: nota:   en la llamada a ‘std::__cxx11::string Persona::getDNI()’
+  inline string getDNI(){
+                ^
+In file included from /home/i82gaarj/Desktop/poo/googletest/include/gtest/gtest.h:375:0,
+                 from ruleta_unittest.cc:16:
+ruleta_unittest.cc: En la función miembro ‘virtual void Ruleta_deleteJugador_Test::TestBody()’:
+ruleta_unittest.cc:99:54: error: passing ‘const Jugador’ as ‘this’ argument discards qualifiers [-fpermissive]
+   EXPECT_EQ("55XX", r.getJugadores().begin()->getDNI());
+                                                      ^
+In file included from crupier.h:4:0,
+                 from ruleta_unittest.cc:14:
+persona.h:23:16: nota:   en la llamada a ‘std::__cxx11::string Persona::getDNI()’
+  inline string getDNI(){
+                ^
+In file included from /home/i82gaarj/Desktop/poo/googletest/include/gtest/gtest.h:375:0,
+                 from ruleta_unittest.cc:16:
+ruleta_unittest.cc:100:61: error: passing ‘const Jugador’ as ‘this’ argument discards qualifiers [-fpermissive]
+   EXPECT_EQ("jugador2", r.getJugadores().begin()->getCodigo());
+                                                             ^
+In file included from ruleta.h:5:0,
+                 from ruleta_unittest.cc:15:
+jugador.h:28:22: nota:   en la llamada a ‘const string Jugador::getCodigo()’
+  inline const string getCodigo(){
+                      ^
+In file included from /home/i82gaarj/Desktop/poo/googletest/include/gtest/gtest.h:375:0,
+                 from ruleta_unittest.cc:16:
+ruleta_unittest.cc: En la función miembro ‘virtual void Ruleta_deleteJugadorDNI_Test::TestBody()’:
+ruleta_unittest.cc:118:54: error: passing ‘const Jugador’ as ‘this’ argument discards qualifiers [-fpermissive]
+   EXPECT_EQ("55XX", r.getJugadores().begin()->getDNI());
+                                                      ^
+In file included from crupier.h:4:0,
+                 from ruleta_unittest.cc:14:
+persona.h:23:16: nota:   en la llamada a ‘std::__cxx11::string Persona::getDNI()’
+  inline string getDNI(){
+                ^
+In file included from /home/i82gaarj/Desktop/poo/googletest/include/gtest/gtest.h:375:0,
+                 from ruleta_unittest.cc:16:
+ruleta_unittest.cc:119:61: error: passing ‘const Jugador’ as ‘this’ argument discards qualifiers [-fpermissive]
+   EXPECT_EQ("jugador2", r.getJugadores().begin()->getCodigo());
+                                                             ^
+In file included from ruleta.h:5:0,
+                 from ruleta_unittest.cc:15:
+jugador.h:28:22: nota:   en la llamada a ‘const string Jugador::getCodigo()’
+  inline const string getCodigo(){
+                      ^
+In file included from /home/i82gaarj/Desktop/poo/googletest/include/gtest/gtest.h:375:0,
+                 from ruleta_unittest.cc:16:
+ruleta_unittest.cc: En la función miembro ‘virtual void Ruleta_escribeLeeJugadores_Test::TestBody()’:
+ruleta_unittest.cc:139:55: error: passing ‘const Jugador’ as ‘this’ argument discards qualifiers [-fpermissive]
+   EXPECT_EQ("44XX", r2.getJugadores().begin()->getDNI());
+                                                       ^
+In file included from crupier.h:4:0,
+                 from ruleta_unittest.cc:14:
+persona.h:23:16: nota:   en la llamada a ‘std::__cxx11::string Persona::getDNI()’
+  inline string getDNI(){
+                ^
+In file included from /home/i82gaarj/Desktop/poo/googletest/include/gtest/gtest.h:375:0,
+                 from ruleta_unittest.cc:16:
+ruleta_unittest.cc:140:62: error: passing ‘const Jugador’ as ‘this’ argument discards qualifiers [-fpermissive]
+   EXPECT_EQ("jugador1", r2.getJugadores().begin()->getCodigo());
+                                                              ^
+In file included from ruleta.h:5:0,
+                 from ruleta_unittest.cc:15:
+jugador.h:28:22: nota:   en la llamada a ‘const string Jugador::getCodigo()’
+  inline const string getCodigo(){
+                      ^
+In file included from /home/i82gaarj/Desktop/poo/googletest/include/gtest/gtest.h:375:0,
+                 from ruleta_unittest.cc:16:
+ruleta_unittest.cc:141:57: error: passing ‘const Jugador’ as ‘this’ argument discards qualifiers [-fpermissive]
+   EXPECT_EQ("55XX", (--r2.getJugadores().end())->getDNI());
+                                                         ^
+In file included from crupier.h:4:0,
+                 from ruleta_unittest.cc:14:
+persona.h:23:16: nota:   en la llamada a ‘std::__cxx11::string Persona::getDNI()’
+  inline string getDNI(){
+                ^
+In file included from /home/i82gaarj/Desktop/poo/googletest/include/gtest/gtest.h:375:0,
+                 from ruleta_unittest.cc:16:
+ruleta_unittest.cc:142:64: error: passing ‘const Jugador’ as ‘this’ argument discards qualifiers [-fpermissive]
+   EXPECT_EQ("jugador2", (--r2.getJugadores().end())->getCodigo());
+                                                                ^
+In file included from ruleta.h:5:0,
+                 from ruleta_unittest.cc:15:
+jugador.h:28:22: nota:   en la llamada a ‘const string Jugador::getCodigo()’
+  inline const string getCodigo(){
+                      ^
+In file included from /home/i82gaarj/Desktop/poo/googletest/include/gtest/gtest.h:375:0,
+                 from ruleta_unittest.cc:16:
+ruleta_unittest.cc: En la función miembro ‘virtual void Ruleta_getPremios_Test::TestBody()’:
+ruleta_unittest.cc:182:55: error: passing ‘const Jugador’ as ‘this’ argument discards qualifiers [-fpermissive]
+   EXPECT_EQ(1580, r.getJugadores().begin()->getDinero());
+                                                       ^
+In file included from ruleta.h:5:0,
+                 from ruleta_unittest.cc:15:
+jugador.h:40:13: nota:   en la llamada a ‘int Jugador::getDinero()’
+  inline int getDinero(){
+             ^
+In file included from /home/i82gaarj/Desktop/poo/googletest/include/gtest/gtest.h:375:0,
+                 from ruleta_unittest.cc:16:
+ruleta_unittest.cc:183:58: error: passing ‘const Jugador’ as ‘this’ argument discards qualifiers [-fpermissive]
+   EXPECT_EQ(880, (++r.getJugadores().begin())->getDinero());
+                                                          ^
+In file included from ruleta.h:5:0,
+                 from ruleta_unittest.cc:15:
+jugador.h:40:13: nota:   en la llamada a ‘int Jugador::getDinero()’
+  inline int getDinero(){
+             ^
+In file included from /home/i82gaarj/Desktop/poo/googletest/include/gtest/gtest.h:375:0,
+                 from ruleta_unittest.cc:16:
+ruleta_unittest.cc: En la función miembro ‘virtual void Ruleta_getPremiosCero_Test::TestBody()’:
+ruleta_unittest.cc:213:54: error: passing ‘const Jugador’ as ‘this’ argument discards qualifiers [-fpermissive]
+   EXPECT_EQ(900, r.getJugadores().begin()->getDinero());
+                                                      ^
+In file included from ruleta.h:5:0,
+                 from ruleta_unittest.cc:15:
+jugador.h:40:13: nota:   en la llamada a ‘int Jugador::getDinero()’
+  inline int getDinero(){
+             ^
+In file included from /home/i82gaarj/Desktop/poo/googletest/include/gtest/gtest.h:375:0,
+                 from ruleta_unittest.cc:16:
+ruleta_unittest.cc:214:58: error: passing ‘const Jugador’ as ‘this’ argument discards qualifiers [-fpermissive]
+   EXPECT_EQ(740, (++r.getJugadores().begin())->getDinero());
+                                                          ^
+In file included from ruleta.h:5:0,
+                 from ruleta_unittest.cc:15:
+jugador.h:40:13: nota:   en la llamada a ‘int Jugador::getDinero()’
+  inline int getDinero(){
+             ^
+make: *** [ruleta_unittest.o] Error 1
