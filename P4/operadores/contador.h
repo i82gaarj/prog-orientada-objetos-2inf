@@ -32,8 +32,11 @@ public:
 	Contador operator - (int x);
 	friend Contador operator - (int x, Contador c);
 
+	// undo: deshace los "x" ultimos cambios, "x" se recibe como parámetro
+	// Devuelve true si lo hizo correctamente, y devuelve false si se le pasa un valor no permitido
 	bool undo(int n = 1);
 
+	// get: devuelve el valor actual del contador
 	inline int get() const{
 		return valor_;
 	}
@@ -42,10 +45,12 @@ public:
 		valor_ = valor;
 	}
 
+	// getMin: devuelve el valor mínimo del contador
 	inline int getMin() const{
 		return min_;
 	}
 
+	// getMax: devuelve el valor máximo del contador
 	inline int getMax() const{
 		return max_;
 	}
