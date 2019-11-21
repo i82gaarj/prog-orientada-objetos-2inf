@@ -26,4 +26,4 @@ int main(void){
 
     std::cout << "Vector de char\n";
     print_vector(c,4);
-    }
+}
