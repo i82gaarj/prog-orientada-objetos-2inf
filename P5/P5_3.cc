@@ -2,28 +2,33 @@
 #include <vector>
 #include <algorithm>
 
+using std::cout;
+using std::cin;
+using std::vector;
+using std::endl;
+
 int main(){
-	std::vector <int> v;
+	vector <int> v;
 	v.resize(5);
 
-	for (std::vector <int>::iterator it = v.begin(); it != v.end(); it++){
-		std::cout << "Introduce valor: " << std::endl;
-		std::cin >> *it;
+	for (vector <int>::iterator it = v.begin(); it != v.end(); it++){
+		cout << "Introduce valor: " << endl;
+		cin >> *it;
 	}
 
 	std::sort(v.begin(), v.end());
 
-	std::cout << "Vector ordenado ascendente:\n";
+	cout << "Vector ordenado ascendente:\n";
 
-	for (std::vector <int>::iterator it = v.begin(); it != v.end(); it++){
-		std::cout << "Valor: " << *it << std::endl;
+	for (vector <int>::iterator it = v.begin(); it != v.end(); it++){
+		cout << "Valor: " << *it << endl;
 	}
 
 	std::sort(v.begin(), v.end(), std::greater <int>());
 
-	std::cout << "Vector ordenado descendente:\n";
+	cout << "Vector ordenado descendente:\n";
 
-	for (std::vector <int>::iterator it = v.begin(); it != v.end(); it++){
-		std::cout << "Valor: " << *it << std::endl;
+	for (vector <int>::iterator it = v.begin(); it != v.end(); it++){
+		cout << "Valor: " << *it << endl;
 	}
 }
