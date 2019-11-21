@@ -1,3 +1,5 @@
+#ifndef CONTADOR_H
+#define CONTADOR_H
 #include <list>
 
 using namespace std;
@@ -63,3 +65,5 @@ public:
 		max_ = max;
 	}
 };
+
+#endif

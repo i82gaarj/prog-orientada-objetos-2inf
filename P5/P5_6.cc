@@ -14,9 +14,9 @@ void print_vector(T *v, const int n){
 
 
 int main(void){
-    int a[5]={1,3,5,7,9};
-    float b[4]={5.6, 7.8, 3.9, 1.2};
-    char c[5]="hola";
+    int a[5] = {1,3,5,7,9};
+    float b[4] = {5.6, 7.8, 3.9, 1.2};
+    char c[5] = "hola";
 
     std::cout << "Vector de enteros\n";
     print_vector(a,5);
