@@ -115,7 +115,7 @@ void Dados::getUltimos2(int v2[]) const{
 
 void Dados::pushDado1_(){
 
-	for (int i = VECTOR_SIZE -1; i > 0; i--){
+	for (int i = VECTOR_SIZE - 1; i > 0; i--){
 		v1_[i] = v1_[i - 1]; 
 	}
 	v1_[0] = d1_;
