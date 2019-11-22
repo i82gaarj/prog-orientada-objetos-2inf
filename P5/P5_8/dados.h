@@ -2,7 +2,10 @@
 #define DADOS_H
 #include <vector>
 #include <cstdlib>
+#include <iostream>
 #define VECTOR_SIZE 5
+
+using namespace std;
 
 // Clase Dados. Gestiona el lanzamiento de dos dados
 class Dados{
@@ -74,6 +77,10 @@ public:
 	// getUltimos2: devuelve los ultimos valores que se han obtenido en el lanzamiento del dado 2
 	void getUltimos2(int v2[]) const;
 
+	// insertador
+	friend ostream &operator << (ostream &stream, const Dados &d);
+	// extractor
+	friend istream &operator >> (istream &stream, Dados &d);
 };
 
 

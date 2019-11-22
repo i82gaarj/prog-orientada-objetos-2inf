@@ -3,6 +3,7 @@
 #include <iostream>
 #include <vector>
 
+using namespace std;
 
 Dados::Dados(){
 	srand(time(NULL)); // Inicializa generador
@@ -131,3 +132,41 @@ void Dados::pushDado2_(){
 
 }
 
+ostream &operator << (ostream &stream, const Dados &d){
+	stream << "Valor dado 1: ";
+	stream << d.d1_;
+	stream << ", valor dado 2: ";
+	stream << d.d2_;
+	stream << "\n";
+	return stream;
+}
+
+istream &operator >> (istream &stream, Dados &d){
+	cout << "Introduce valor dado 1: ";
+
+	while (true){
+		int d1;
+		stream >> d1;
+		if (d.setDado1(d1)){
+			cout << "Valor correcto\n";
+			break;
+		}
+		else{
+			cout << "Valor incorrecto, vuelva a introducirlo: ";
+		}
+	}
+
+	cout << "Introduce valor dado 2: ";
+
+	while (true){
+		int d2;
+		stream >> d2;
+		if (d.setDado2(d2)){
+			cout << "Valor correcto\n";
+			break;
+		}
+		else{
+			cout << "Valor incorrecto, vuelva a introducirlo: ";
+		}
+	}
+}
