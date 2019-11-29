@@ -25,7 +25,7 @@ public:
 		dinero_ = 1000;
 	}
 
-	inline const string getCodigo() const{
+	inline string getCodigo() const{
 		return codigo_;
 	}
 

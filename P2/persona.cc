@@ -1,14 +1,14 @@
 #include "persona.h"
 
 Persona::Persona(string dni, string nombre, string apellidos, int edad, string direccion, string localidad, string provincia, string pais){
-	dni_ = dni;
-	edad_ = edad;
-	nombre_ = nombre;
-	apellidos_ = apellidos;
-	direccion_ = direccion;
-	localidad_ = localidad;
-	provincia_ = provincia;
-	pais_ = pais;
+	setDNI(dni);
+	setEdad(edad);
+	setNombre(nombre);
+	setApellidos(apellidos);
+	setDireccion(direccion);
+	setLocalidad(localidad);
+	setProvincia(provincia);
+	setPais(pais);
 }
 
 
