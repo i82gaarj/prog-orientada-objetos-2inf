@@ -10,7 +10,7 @@ void Jugador::setApuestas(){
 	apuestas_.clear();
 	string nombre_archivo = getDNI() + ".txt";
 
-	ifstream archivo(nombre_archivo.c_str());
+	ifstream archivo(nombre_archivo);
 
 	if (!archivo){
 		return;

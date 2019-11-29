@@ -27,7 +27,7 @@ public:
 		return edad_;
 	}
 
-	inline string getNombre(){
+	inline string getNombre() const{
 		return nombre_;
 	}
 
@@ -47,7 +47,7 @@ public:
 		return localidad_;
 	}
 
-	inline string getProvincia(){
+	inline string getProvincia() const{
 		return provincia_;
 	}
 
