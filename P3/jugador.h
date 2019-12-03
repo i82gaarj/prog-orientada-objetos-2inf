@@ -21,8 +21,8 @@ private:
 
 public:
 	Jugador(string dni, string codigo, string nombre = "", string apellidos = "", int edad = 0, string direccion = "", string localidad = "", string provincia = "", string pais = ""):Persona(dni, nombre, apellidos, edad, direccion, localidad, provincia, pais){
-		codigo_ = codigo;
-		dinero_ = 1000;
+		setCodigo(codigo);
+		setDinero(1000);
 	}
 
 	inline string getCodigo() const{
