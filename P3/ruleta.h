@@ -17,7 +17,7 @@ private:
 
 public:
 	Ruleta(Crupier c):crupier_(c){
-		banca_ = 1000000;
+		setBanca(1000000);
 		bola_ = -1;
 		srand(time(NULL));
 	}
@@ -36,18 +36,10 @@ public:
 		}
 	}
 
+	bool setBola(int bola);
+
 	inline int getBola() const{
 		return bola_;
-	}
-
-	bool setBola(int bola){
-		if (bola >= 0 && bola <= 36){
-			bola_ = bola;
-			return true;
-		}
-		else{
-			return false;
-		}
 	}
 
 	inline const Crupier getCrupier(){

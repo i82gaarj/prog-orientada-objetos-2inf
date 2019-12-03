@@ -7,6 +7,15 @@
 
 using namespace std;
 
+bool Ruleta::setBola(int bola){
+	if (bola >= 0 && bola <= 36){
+		bola_ = bola;
+		return true;
+	}
+	else{
+		return false;
+	}
+}
 
 bool Ruleta::addJugador(Jugador jugador){
 	for(list<Jugador>::iterator it = jugadores_.begin(); it != jugadores_.end(); it++){
@@ -120,7 +129,7 @@ int Ruleta::deleteJugador(Jugador j){
 }
 
 void Ruleta::getPremios(){
-	list <Jugador> :: iterator it;
+	list <Jugador>::iterator it;
 
 	int gananciasBanca = 0;
 

@@ -7,6 +7,15 @@
 
 using namespace std;
 
+bool Ruleta::setBola(int bola){
+	if (bola >= 0 && bola <= 36){
+		bola_ = bola;
+		return true;
+	}
+	else{
+		return false;
+	}
+}
 
 bool Ruleta::addJugador(Jugador jugador){
 	for(list<Jugador>::iterator it = jugadores_.begin(); it != jugadores_.end(); it++){
@@ -116,22 +125,11 @@ void Ruleta::leeJugadores(){
 }
 
 int Ruleta::deleteJugador(Jugador j){
-	if(jugadores_.empty()){
-		return -1;
-	}
-
-	for(list <Jugador> :: iterator it = jugadores_.begin(); it != jugadores_.end(); it++){
-		if (it -> getDNI() == j.getDNI()){
-			jugadores_.erase(it);
-			return 1;
-		}
-			
-	}
-	return -2;
+	return Ruleta::deleteJugador(j.getDNI());
 }
 
 void Ruleta::getPremios(){
-	list <Jugador> :: iterator it;
+	list <Jugador>::iterator it;
 
 	int gananciasBanca = 0;
 
@@ -219,7 +217,7 @@ void Ruleta::getPremiosJugador(list <Jugador> :: iterator jugador, int &ganancia
 				}
 			}break;
 			case 4:{
-				if(getBola() == 0) { 	// With number 0, the player loses
+				if(getBola() == 0) {
 					premio -= atoi(cantidad);
 					gananciasBanca += atoi(cantidad);
 					break;
@@ -235,13 +233,13 @@ void Ruleta::getPremiosJugador(list <Jugador> :: iterator jugador, int &ganancia
 					resultado = "alto";
 				}
 
-				if(strcmp(resultado.c_str(), valor) == 0) {	// Evaluates if player's bet is correct
+				if(strcmp(resultado.c_str(), valor) == 0) {
 					premio += atoi(cantidad);
-					gananciasBanca -= atoi(cantidad);	// If the player wins, bank loses
+					gananciasBanca -= atoi(cantidad);
 				}
 				else {
 					premio -= atoi(cantidad);
-					gananciasBanca += atoi(cantidad);	// If the player loses, bank wins
+					gananciasBanca += atoi(cantidad);
 				}
 			}break;
 		}
