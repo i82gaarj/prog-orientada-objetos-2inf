@@ -10,6 +10,7 @@ using namespace std;
 bool Ruleta::setBola(int bola){
 	if (bola >= 0 && bola <= 36){
 		bola_ = bola;
+		nbolas_++;
 		return true;
 	}
 	else{
@@ -140,6 +141,7 @@ void Ruleta::getPremios(){
 	escribeJugadores();
 	setBanca(getBanca() + gananciasBanca);
 	
+	gananciasBanca_ = gananciasBanca;
 }
 
 void Ruleta::getPremiosJugador(list <Jugador> :: iterator jugador, int &gananciasBanca){

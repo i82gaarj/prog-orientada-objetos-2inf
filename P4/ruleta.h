@@ -14,6 +14,8 @@ private:
 	int bola_;
 	list <Jugador> jugadores_;
 	Crupier crupier_;
+	int nbolas_;
+	int gananciasBanca_;
 
 public:
 	Ruleta(Crupier c):crupier_(c){
@@ -70,6 +72,20 @@ public:
 
 	void getPremiosJugador(list <Jugador> :: iterator player, int &gananciasBanca);
 
+	int getSumaDinero(){
+		int sumaDineroJugadores = 0;
+		for (list <Jugador>::iterator it = jugadores_.begin(); it != jugadores_.end(); it++){
+			sumaDineroJugadores += it -> getDinero();
+		}
+		return (sumaDineroJugadores + banca_);
+	}
+
+	void getEstadoRuleta(int &njugadores, int &sumaDinero, int &nvecesbola, int &gananciasBanca){
+		njugadores = jugadores_.size();
+		sumaDinero = getSumaDinero();
+		nvecesbola = nbolas_;
+		gananciasBanca = gananciasBanca_;
+	}
 };
 
 #endif
