@@ -59,7 +59,16 @@ int main(){
                 string dni;
                 cout << "Introduce el DNI del jugador que desea eliminar: ";
                 cin >> dni;
-                r.deleteJugador(dni);
+                int comprobar = r.deleteJugador(dni);
+                if (comprobar == 1){
+                    cout << "Jugador eliminado" << endl;
+                }
+                else if (comprobar == -1){
+                    cout << "No hay jugadores" << endl;
+                }
+                else if (comprobar == -2){
+                    cout << "Jugador no encontrado" << endl;
+                }
             }break;
 
             case 6:{
@@ -70,6 +79,7 @@ int main(){
                 cin >> codigo;
                 Jugador j(dni, codigo);
                 r.addJugador(j);
+                cout << "Jugador añadido" << endl;
             }break;
 
             default:{
