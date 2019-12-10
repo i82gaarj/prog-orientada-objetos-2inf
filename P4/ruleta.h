@@ -22,6 +22,8 @@ public:
 		setBanca(1000000);
 		bola_ = -1;
 		srand(time(NULL));
+		nbolas_ = 0;
+		gananciasBanca_ = 0;
 	}
 
 	inline int getBanca() const{
@@ -85,6 +87,10 @@ public:
 		sumaDinero = getSumaDinero();
 		nvecesbola = nbolas_;
 		gananciasBanca = gananciasBanca_;
+	}
+
+	int getGananciasBanca(){
+		return gananciasBanca_;
 	}
 };
 

@@ -21,10 +21,10 @@ int main(){
     Ruleta r(c);
 
     int opcion;
-    mostrar_menu();
-    cin >> opcion;
 
     do{
+        mostrar_menu();
+        cin >> opcion;
         switch (opcion){
             case 1:{
                 r.leeJugadores();
@@ -43,26 +43,38 @@ int main(){
                      << "Ganancias banca: " << gananciasBanca << endl;
                 list <Jugador> jugadores = r.getJugadores();
                 for (list <Jugador>::iterator it = jugadores.begin(); it != jugadores.end(); it++){
-                    cout << it -> getNombre() << " tiene "
-                         << it -> getDinero() << " euros";
+                    cout << it -> getDNI() << " tiene "
+                         << it -> getDinero() << " euros" << endl;
                 }
             }break;
 
             case 4:{
-
+                r.giraRuleta();
+                r.getPremios();
+                cout << "Ha salido el " << r.getBola() << endl
+                     << "Ganancias banca:" << r.getGananciasBanca() << endl;
             }break;
 
             case 5:{
-
+                string dni;
+                cout << "Introduce el DNI del jugador que desea eliminar: ";
+                cin >> dni;
+                r.deleteJugador(dni);
             }break;
 
             case 6:{
-
+                string dni, codigo;
+                cout << "Introduce DNI: " << endl;
+                cin >> dni;
+                cout << "Introduce codigo: " << endl;
+                cin >> codigo;
+                Jugador j(dni, codigo);
+                r.addJugador(j);
             }break;
 
             default:{
                 cout << "Opcion no valida\n";
-            }
+            }break;
         }
     }while(opcion != 7);
 }
