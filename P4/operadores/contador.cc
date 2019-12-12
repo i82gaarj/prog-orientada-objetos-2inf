@@ -163,26 +163,46 @@ Contador Contador::operator - (int x){ // c - x
 
 Contador operator - (int x, Contador c){
 	Contador aux(c);
-	int nuevo_valor = x - aux.get();
+	if (x < aux.get()){
+		int nuevo_valor = x - aux.get();
 
-	if (nuevo_valor > aux.getMax()){
-		aux.setValor(aux.getMax());
-	}
-	else if (nuevo_valor < aux.getMin()){
-		aux.setValor(aux.getMin());
+		if (nuevo_valor > aux.getMax()){
+			aux.setValor(aux.getMax());
+		}
+		else if (nuevo_valor < aux.getMin()){
+			aux.setValor(aux.getMin());
+		}
+		else{
+			aux.setValor(nuevo_valor);
+		}
+
+		aux.ncambios_++;
+		aux.cambios_.push_back(aux.valor_);
+
+		return aux;
 	}
 	else{
-		aux.setValor(x);
+		int nuevo_valor = aux.get() - x;
+
+		if (nuevo_valor > aux.getMax()){
+			aux.setValor(aux.getMax());
+		}
+		else if (nuevo_valor < aux.getMin()){
+			aux.setValor(aux.getMin());
+		}
+		else{
+			aux.setValor(nuevo_valor);
+		}
+
+		aux.ncambios_++;
+		aux.cambios_.push_back(aux.valor_);
+
+		return aux;
 	}
-
-	aux.ncambios_++;
-	aux.cambios_.push_back(aux.valor_);
-
-	return aux;
 }
 
 bool Contador::undo(int x){
-	if (x > (ncambios_ - 1) || x < 1){
+	if (x >= ncambios_ || x < 1){
 		return false;
 	}
 	else{
